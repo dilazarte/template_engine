@@ -1,0 +1,20 @@
+extends layaout.pug
+block content
+    .container
+        h1.text-center Lista de productos
+        br
+        table.table
+            thead
+                tr
+                    th(scope='col') ID
+                    th(scope='col') Nombre
+                    th(scope='col') Precio
+                    th(scope='col') Imagen
+            tbody
+            each producto in productos
+                tr
+                    th(scope='row')=producto.id
+                    td=producto.title
+                    td=producto.price
+                    td
+                        img(src=producto.thumbnail alt=producto.title width='30' height='30')

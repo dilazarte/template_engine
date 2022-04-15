@@ -1,0 +1,8 @@
+<% productos.forEach(function(prod){ %>
+    <tr>
+        <th scope="row"><%= prod.id %></th>
+        <td><%= prod.title %></td>
+        <td><%= prod.price %></td>
+        <td><img src=<%= prod.thumbnail %> alt=<%= prod.title %> width="30" height="30"></td>
+    </tr>
+<% }); %>

@@ -1,0 +1,17 @@
+extends layaout.pug
+block content
+    div.container
+        h1.text-center Añadir Productos
+        br
+        .formulario.m-auto
+            form(class='p-3' action='/productos' method='post')
+                .mb-3
+                    label.form-label(for='title') Nombre del producto
+                    input.form-control(type='text' name='title')
+                .mb-3
+                    label.form-label(for='price') Precio
+                    input.form-control(type='number' name='price')
+                .mb-3
+                    label.form-label(for='thumbnail') Imagen (URL)
+                    input.form-control(type='text' name='thumbnail')
+                button(class='btn btn-primary' type='submit') Agregar

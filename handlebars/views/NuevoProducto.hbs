@@ -1,0 +1,21 @@
+{{> nav}}
+<div class="container">
+    <h1 class="text-center">Añadir Productos</h1><br>
+    <div class="formulario m-auto">
+        <form action="/productos" method="post" class="p-3">
+            <div class="mb-3">
+                <label for="title" class="form-label">Nombre del producto</label>
+                <input type="text" name="title" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="price" class="form-label">Precio</label>
+                <input type="number" name="price" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="thumbnail" class="form-label">Imagen (URL)</label>
+                <input type="text" name="thumbnail" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">Agregar</button>
+        </form>
+    </div>
+</div>
