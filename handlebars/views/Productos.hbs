@@ -1,6 +1,7 @@
 {{> nav}}
 <div class="container">
     <h1 class="text-center">Lista de productos</h1><br>
+    {{#if productsExist}}
     <table class="table">
         <thead>
             <tr>
@@ -21,4 +22,10 @@
                 {{/each}}
         </tbody>
     </table>
+
+    {{else}}
+        <div class="container bg-warning p-3 rounded-3">
+            <h2>No hay productos</h2>
+        </div>
+    {{/if}}
 </div>

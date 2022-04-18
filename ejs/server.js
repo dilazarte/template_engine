@@ -22,7 +22,7 @@ app.get('/', (req, res)=>{
 
 app.get('/productos', async(req, res)=>{
     const productos = await contenedor.getAll()
-    res.render('pages/productos', {productos})
+    res.render('pages/productos', {productos, productsExist: productos.length > 0 ? true : false})
 })
 
 // <!-- Ruta POST -->

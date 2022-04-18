@@ -33,7 +33,7 @@ app.get('/', (req, res)=>{
 
 app.get('/productos', async(req, res)=>{
     const productos = await contenedor.getAll()
-    res.render('Productos.hbs', {productos})
+    res.render('Productos.hbs', {productos, productsExist: productos.length > 0 ? true : false})
 })
 
 // <!-- rutas POST! --->

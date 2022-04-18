@@ -13,6 +13,7 @@
 
     <div class="container">
         <h1 class="text-center">Lista de productos</h1><br>
+        <% if(productsExist) { %>
         <table class="table">
             <thead>
                 <tr>
@@ -26,6 +27,12 @@
                 <%- include('../partials/products'); %>
             </tbody>
         </table>
+        
+        <% } else { %>
+            <div class="container bg-warning p-3 rounded-3">
+                <h2>No hay productos</h2>
+            </div>
+        <% } %>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
